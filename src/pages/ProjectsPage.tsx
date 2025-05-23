@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import '../styles/ProjectsPage.css';
+import specialistImg from '../assets/images/specialist.jpg';
 
 interface Project {
   id: number;
@@ -65,15 +66,15 @@ const ProjectsPage = () => {
         'Specialist Doctors simplifies the process of finding and booking appointments with specialized healthcare providers. The app features an extensive database of medical professionals categorized by specialty, location, and availability.',
         'Patients can browse doctor profiles with credentials, reviews, and ratings, book appointments directly through the app, receive reminders, and manage their medical history. The platform also includes secure messaging for pre-appointment questions and follow-up care.'
       ],
-      technologies: ['Flutter', 'Node.js', 'MongoDB', 'Healthcare API'],
+      technologies: ['Flutter', 'Node.js', 'FireBase', 'Healthcare API'],
       details: {
         'Platform': 'Android & iOS',
-        'Built with': 'Flutter, Node.js backend, MongoDB',
+        'Built with': 'Flutter, FireBase backend',
         'Features': 'Appointment scheduling, Doctor reviews, Secure messaging',
         'Timeline': '4 months',
         'Role': 'Lead Mobile Developer'
       },
-      imageUrl: 'https://via.placeholder.com/500x300/ff7b29/ffffff?text=Specialist+Doctors',
+      imageUrl: specialistImg,
       link: '#'
     }
   ];
@@ -217,4 +218,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default ProjectsPage; 
+export default ProjectsPage;
