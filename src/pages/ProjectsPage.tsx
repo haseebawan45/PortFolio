@@ -39,7 +39,7 @@ const ProjectsPage = () => {
         'Role': 'Full-stack mobile developer'
       },
       imageUrl: bloodlineImg,
-      link: '#'
+      link: 'https://github.com/haseebawan45/BloodLine'
     },
     {
       id: 2,
@@ -58,7 +58,7 @@ const ProjectsPage = () => {
         'Role': 'UI/UX Designer and Developer'
       },
       imageUrl: tiklarmImg,
-      link: '#'
+      link: 'https://github.com/haseebawan45/tiklarm'
     },
     {
       id: 3,
@@ -77,7 +77,7 @@ const ProjectsPage = () => {
         'Role': 'Lead Mobile Developer'
       },
       imageUrl: specialistImg,
-      link: '#'
+      link: 'https://github.com/haseebawan45/Specialist_Doctors'
     }
   ];
 
