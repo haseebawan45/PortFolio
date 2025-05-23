@@ -1,7 +1,9 @@
 import { motion, useInView } from 'framer-motion';
 import { useState, useRef } from 'react';
 import '../styles/ProjectsPage.css';
-import specialistImg from '../assets/images/specialist.jpg';
+import specialistImg from '/assets/images/specialist.jpg';
+import bloodlineImg from '/assets/images/bloodline.jpg';
+import tiklarmImg from '/assets/images/tiklarm.jpg';
 
 interface Project {
   id: number;
@@ -36,7 +38,7 @@ const ProjectsPage = () => {
         'Timeline': '3 months',
         'Role': 'Full-stack mobile developer'
       },
-      imageUrl: 'https://via.placeholder.com/500x300/ff7b29/ffffff?text=Bloodline+App',
+      imageUrl: bloodlineImg,
       link: '#'
     },
     {
@@ -55,7 +57,7 @@ const ProjectsPage = () => {
         'Timeline': '2 months',
         'Role': 'UI/UX Designer and Developer'
       },
-      imageUrl: 'https://via.placeholder.com/500x300/f9a66c/ffffff?text=Tiklarm+App',
+      imageUrl: tiklarmImg,
       link: '#'
     },
     {
