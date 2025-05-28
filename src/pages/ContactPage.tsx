@@ -9,12 +9,6 @@ const ContactPage = () => {
     subject: '',
     message: ''
   });
-  
-  const [formStatus, setFormStatus] = useState({
-    submitted: false,
-    success: false,
-    message: ''
-  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -23,34 +17,10 @@ const ContactPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Simulate form submission
-    setFormStatus({ submitted: true, success: false, message: 'Sending message...' });
-    
-    setTimeout(() => {
-      setFormStatus({
-        submitted: true,
-        success: true,
-        message: 'Thank you! Your message has been sent successfully.'
-      });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      
-      // Reset form status after a few seconds
-      setTimeout(() => {
-        setFormStatus({
-          submitted: false,
-          success: false,
-          message: ''
-        });
-      }, 5000);
-    }, 2000);
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=haseebawang4545@gmail.com&su=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    )}`;
+    window.open(gmailUrl, '_blank');
   };
 
   const containerVariants = {
@@ -207,7 +177,6 @@ const ContactPage = () => {
           
           <motion.button 
             type="submit"
-            disabled={formStatus.submitted}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             initial={{ y: 20, opacity: 0 }}
@@ -216,21 +185,10 @@ const ContactPage = () => {
           >
             SEND MESSAGE
           </motion.button>
-          
-          {formStatus.submitted && (
-            <motion.div 
-              className={`form-status ${formStatus.success ? 'success' : ''}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
-              {formStatus.message}
-            </motion.div>
-          )}
         </motion.form>
       </div>
     </motion.div>
   );
 };
 
-export default ContactPage; 
+export default ContactPage;

@@ -79,6 +79,7 @@ main {
   width: 100vw;
   max-width: 100vw;
   padding: 0;
+  padding-top: var(--nav-height);
   position: relative;
   z-index: 1;
   display: flex;
@@ -158,6 +159,7 @@ img {
   
   main {
     padding: 0;
+    padding-top: var(--nav-height);
   }
   
   .container {
